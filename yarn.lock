@@ -24,20 +24,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ai-wh40k@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "ai-wh40k@workspace:."
-  dependencies:
-    "@prettier/plugin-xml": 2
-    husky: 8
-    lint-staged: 14
-    pinst: 3
-    prettier: 2
-    prettier-plugin-java: 2
-    prettier-plugin-properties: ^0.2.0
-  languageName: unknown
-  linkType: soft
-
 "ansi-escapes@npm:^5.0.0":
   version: 5.0.0
   resolution: "ansi-escapes@npm:5.0.0"
@@ -69,6 +55,20 @@ __metadata:
   checksum: e2a8e769a863f3d4ee887b5fe21f63193a891c68b612ddb4b68d82d1b5f3ff9073af066c343e9867a393fe4c2555dcb33e89b937195feb9c1613d259edfcd459
   languageName: node
   linkType: hard
+
+"bsdata-client@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "bsdata-client@workspace:."
+  dependencies:
+    "@prettier/plugin-xml": 2
+    husky: 8
+    lint-staged: 14
+    pinst: 3
+    prettier: 2
+    prettier-plugin-java: 2
+    prettier-plugin-properties: ^0.2.0
+  languageName: unknown
+  linkType: soft
 
 "chalk@npm:5.3.0":
   version: 5.3.0
