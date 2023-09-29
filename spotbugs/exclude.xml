@@ -7,8 +7,7 @@
   <Match>
     <And>
       <BugPattern name="EI_EXPOSE_REP" />
-      <Package name="com.xenoterracide.ai.wh40k.game" />
-      <Method name="grid" />
+      <Package name="net.battlescribe.schema.catalogueschema" />
     </And>
   </Match>
 </FindBugsFilter>

@@ -4,7 +4,9 @@ version = "0.1.0-SNAPSHOT"
 buildscript.dependencyLocking.lockAllConfigurations()
 
 plugins {
-  id("our.java-library")
+  id("our.bom")
+  id("our.java-compile")
+  id("our.spotbugs")
   id("com.intershop.gradle.jaxb").version("6.+")
 }
 
