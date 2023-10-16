@@ -8,6 +8,7 @@ plugins {
   id("our.java-compile")
   id("our.spotbugs")
   id("com.intershop.gradle.jaxb").version("6.+")
+  `maven-publish`
 }
 
 jaxb {
@@ -22,4 +23,21 @@ dependencies {
   implementation(platform(libs.spring.platform))
   implementation(libs.log4j.api)
   implementation(libs.jaxb.api)
+}
+
+publishing {
+  publications {
+    create<MavenPublication>("maven") {
+      from(components["java"])
+      withBuildIdentifier()
+      pom {
+        licenses {
+          license {
+            name = "The Apache License, Version 2.0"
+            url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      }
+    }
+  }
 }
