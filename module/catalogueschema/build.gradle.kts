@@ -6,6 +6,7 @@ buildscript.dependencyLocking.lockAllConfigurations()
 plugins {
   id("our.bom")
   id("our.java-compile")
+  id("our.java-test")
   id("our.spotbugs")
   id("com.intershop.gradle.jaxb").version("6.+")
   `maven-publish`
@@ -23,6 +24,7 @@ dependencies {
   implementation(platform(libs.spring.platform))
   implementation(libs.log4j.api)
   implementation(libs.jaxb.api)
+  implementation(libs.jaxb.runtime)
 }
 
 publishing {
