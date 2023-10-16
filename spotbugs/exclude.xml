@@ -6,7 +6,10 @@
 >
   <Match>
     <And>
-      <BugPattern name="EI_EXPOSE_REP" />
+      <Or>
+        <BugPattern name="EI_EXPOSE_REP" />
+        <BugPattern name="PI_DO_NOT_REUSE_PUBLIC_IDENTIFIERS_CLASS_NAMES" />
+      </Or>
       <Package name="net.battlescribe.schema.catalogueschema" />
     </And>
   </Match>
