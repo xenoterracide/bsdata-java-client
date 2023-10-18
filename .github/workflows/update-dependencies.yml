@@ -7,7 +7,7 @@ on:
     #         │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
     #         │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
     #         * * * * *
-    - cron: "0 4 * * 4" # 4am every Thursday
+    - cron: "0 4 * * 3" # 4am every Wednesday
 jobs:
   update-java:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
           branch: topic/update-java
           token: ${{ secrets.PAT }}
       - run: gh pr merge --auto --squash ${{ env.PULL_REQUEST_NUMBER }}
-        if: ${{ env.PULL_REQUEST_NUMBER == '' }}
+        if: ${{ env.PULL_REQUEST_NUMBER != '' }}
         env:
           GH_TOKEN: ${{ secrets.PAT }}
   update-node:
@@ -48,6 +48,6 @@ jobs:
           branch: topic/update-node
           token: ${{ secrets.PAT }}
       - run: gh pr merge --auto --squash ${{ env.PULL_REQUEST_NUMBER == '' }}
-        if: ${{ env.PULL_REQUEST_NUMBER }}
+        if: ${{ env.PULL_REQUEST_NUMBER != '' }}
         env:
           GH_TOKEN: ${{ secrets.PAT }}
